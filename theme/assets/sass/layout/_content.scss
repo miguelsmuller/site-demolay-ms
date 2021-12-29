@@ -1,0 +1,288 @@
+/* # CONTENT
+================================================== */
+/* # BASE
+================================================== */
+@import "sprites/*.png";
+@include all-sprites-sprites;
+
+body {
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, tahoma, verdana, Arial, sans-serif !important;
+    background-color: $white;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, tahoma, verdana, Arial, sans-serif !important;
+}
+
+a{
+    color: $blue-dark;
+}
+
+/* # ESPAÇAMENTO
+================================================== */
+.padding {
+    padding: 20px;
+}
+.nopadding {
+    padding: 0;
+}
+.hpadding{
+    padding-left:    20px;
+    padding-right:   20px;
+}
+.nohpadding {
+    padding-left:    0;
+    padding-right:   0;
+}
+.vpadding {
+    padding-top:     20px;
+    padding-bottom: 20px;
+}
+.novpadding {
+    padding-top:     0;
+    padding-bottom: 0;
+}
+/* # MARGEM
+================================================== */
+.margin {
+    margin: 20px;
+}
+.nomargin{
+    margin: 0;
+}
+.hmargin {
+    margin-left:     20px;
+    margin-right:    20px;
+}
+.nohmargin {
+    margin-left:     0;
+    margin-right:    0;
+}
+.vmargin {
+    margin-top:  20px;
+    margin-bottom: 20px;
+}
+.novmargin {
+    margin-top:  0;
+    margin-bottom: 0;
+}
+
+
+#breadcrumbs{
+    font-size: 11px;
+    margin: 10px 0 20px;
+}
+
+.perfil-pessoa{
+    margin-bottom: 25px;
+}
+
+div.container-auxiliar{
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    .box-pesquisas{
+        padding-left: 0;
+        list-style: none;
+
+        >li{
+            margin-bottom: 30px;
+
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+div.container-manutencao{
+    @include background-image( image-url("bg-main.png") );
+    background-repeat: repeat-x;
+    background-color: $white-dark;
+
+    .logo-gcems{
+        text-align: center;
+        margin-top: 30px;
+        img{
+            visibility: hidden;
+            &.animated{
+                visibility: visible;
+            }
+        }
+    }
+
+    .jumbotron{
+        margin-bottom: 210px;
+        margin-top: 80px;
+        background-color: $white-light;
+        border: 1px solid #E8E6ED;
+        @include box-shadow(#939296 2px 2px 10px);
+        visibility: hidden;
+        &.animated{
+            visibility: visible;
+        }
+    }
+}
+
+div.container-principal{
+    @include background-image( image-url("bg-main.png") );
+    background-repeat: repeat-x;
+    background-color: $white-dark;
+
+    .container{
+        background-color: $white;
+    }
+
+    h1{
+        margin-top: 0;
+        font-weight: 700;
+        padding-right: 25px;
+    }
+
+    ul.well{
+        margin-bottom: 10px;
+        font-size: 14px;
+        @include box-shadow(none);
+
+        &.well-resumo{
+            font-size: 11px;
+        }
+
+
+            &>li{
+                margin-bottom: 12px;
+                margin-top: 12px;
+            }
+
+    }
+
+    .well-resumo{
+        margin-bottom: 10px;
+        font-size: 14px;
+        @include box-shadow(none);
+
+        &>ul{
+            font-size: 11px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .box-veja-mais{
+        padding-left: 0;
+        list-style: none;
+
+        .item{
+            @include box-shadow(none);
+            @include border-radius (4px);
+            text-align: center;
+            background-color: $white-light;
+
+            margin-bottom: 20px;
+            height: 165px;
+            overflow: hidden;
+            padding: 15px;
+            border: 1px solid #ccc;
+
+
+            a{
+                color: $blue-dark;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+
+            h2{
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 0;
+                text-transform: uppercase;
+
+            }
+        }
+    }
+}
+
+.resumo-artigo{
+    @include border-radius (4px);
+    border: 1px solid #ccc;
+    padding: 6px;
+    margin-bottom: 40px;
+
+    img.img-resumo-artigo{
+       @include border-radius (4px);
+    }
+
+    .header-resumo-artigo{
+        h4{
+            margin-top: 15px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        a{
+            font-weight: 900;
+            color: $blue-dark;
+        }
+    }
+
+    .footer-resumo-artigo{
+        font-size: 11px;
+        margin-bottom: 2px;
+        margin-top: 20px;
+
+        ul{
+            float: left;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+            line-height: 22px;
+
+            >li{
+                display: inline-block;
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+        }
+
+        .ler-mais{
+            float: right;
+            position: relative;
+            font-size: 16px;
+            font-weight: 800;
+        }
+    }
+}
+
+.list-artigo{
+    min-height: 350px;
+    max-height: 350px;
+    height: 324px;
+    overflow: hidden;
+    text-align: center;
+    @extend .resumo-artigo;
+}
+
+
+/* # ASIDE
+================================================== */
+aside{
+    ul.menu{
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li{
+            @extend .sprites-plus;
+        }
+
+        a{
+            padding-left: 25px;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: $blue-dark;
+        }
+    }
+}

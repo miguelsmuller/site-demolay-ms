@@ -1,0 +1,376 @@
+/*
+01. LINK DEFAULT
+*/
+
+/* # TYPO
+================================================== */
+h1{ font-size: 28px; }
+h2{ font-size: 26px; }
+h3{ font-size: 22px; }
+h4{ font-size: 20px; }
+h5{ font-size: 18px; }
+h6{ font-size: 16px; }
+
+hr {
+    border-top: 3px solid $blue-dark;
+}
+
+h1.heading{
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 22px;
+
+    span{
+        display: block;
+
+        &.bottom{
+            position: absolute;
+            height: 5px;
+            width: 80px;
+            background-color: #333D46;
+        }
+    }
+
+    &.heading-center{
+        text-align: center;
+
+        span{
+            display: inline;
+        }
+
+        span.left,
+        span.right{
+            position: absolute;
+            height: 5px;
+            width: 80px;
+            background-color: $blue-dark;
+            padding: 0px 10px;
+            margin-right: 10px;
+            margin-top: 12px;
+            margin-left: -110px;
+        }
+        span.right{
+            margin-left: 30px;
+        }
+    }
+
+    &+ h5{
+        margin: 0;
+        position: relative;
+        top: -35px;
+        text-align: center;
+    }
+}
+
+
+/* # ALERT
+================================================== */
+.alert.alert-top{
+    margin-bottom: 0;
+}
+
+
+/* # BUTTONS
+================================================== */
+.btn-theme {
+    color: $blue-dark;
+    background-color: $yellow;
+    border-color: darken($yellow, 8);
+    font-weight: bold;
+}
+
+
+/* # FORMULÁRIO
+================================================== */
+.customForm{
+
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea{
+    @include box-shadow($white-dark 0px 0px 0px 3px);
+    border: 1px solid #DCDCDC;
+
+    &:focus{
+        @include box-shadow($white-dark 0px 0px 0px 3px);
+        border: 1px solid #DCDCDC;
+    }
+}
+
+.help-block{
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* # IMAGENS
+================================================== */
+
+.gallery {
+    margin-top: 30px;
+}
+.gallery img{
+    border-width: 1px !important;
+}
+
+.gallery .gallery-caption{
+    font-size: 11px;
+    margin-top: 2px;
+}
+img.alignleft, div.alignleft,img.alignnone, div.alignnone {
+    float:left;
+    margin: 5px 20px 0px 0px !important;
+}
+img.alignright, div.alignright {
+    float:right;
+    margin: 5px 0px 0px 20px !important;
+}
+img.aligncenter, div.aligncenter {
+    text-align:center;
+    margin:0 auto;
+    margin-bottom: 15px;
+    display: block;
+}
+.wp-caption p.wp-caption-text { /* Caption */
+    color:#2C373D;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 6px 10px 6px 10px;
+    margin: 0;
+    text-align: center;
+}
+.no-border{
+    border: none !important;
+    @include box-shadow (none !important);
+}
+
+
+/* # JUMBOTRON
+================================================== */
+.jumbotron {
+    margin-bottom: 15px;
+
+    .container{
+        background-color: transparent !important;
+    }
+}
+
+
+/* # NAVIGATION
+================================================== */
+@mixin text-normal {
+    @include transition (all .1s 0 ease-in);
+    @include border-radius (8px);
+    color: $blue-dark;
+    margin: 6px 2px;
+    padding: 8px 8px;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    .caret{
+        @include transition (all .1s 0 ease-in);
+        border-top-color: $blue-dark;
+        border-bottom-color: $blue-dark;
+    }
+}
+@mixin text-hover {
+    background-color: $blue-dark;
+    color: $white-dark;
+
+    .caret{
+        border-top-color: $white-dark;
+        border-bottom-color: $white-dark;
+    }
+
+}
+@mixin text-open {
+    background-color: $blue-dark;
+    color: $white-dark;
+}
+
+ul.nav-principal{
+    @include background-image( image-url("yellow-noise.jpg") );
+    @include border-radius(8px);
+
+    position: absolute;
+    width: 100%;
+    bottom: -75%;
+
+    padding: 0px 5px;
+
+    border-top: 5px solid $blue-dark;
+    border-bottom: 5px solid $blue-dark;
+
+    >li{
+        float: left;
+        >a{
+            @include text-normal;
+            &:hover,
+            &:focus {
+                @include text-hover;
+            }
+        }
+
+        &.open,
+        &:active,
+        &.active,
+        &.open.active,
+        &.current-menu-ancestor{
+            >a{
+                @include text-open;
+
+                &:hover,
+                &:focus {
+                    @include text-hover;
+                }
+
+                .caret{
+                    border-top-color: $white-dark;
+                    border-bottom-color: $white-dark;
+                }
+            }
+        }
+        > ul.dropdown-menu{
+            @include border-top-radius (0);
+        }
+    }
+}
+
+ul.nav-superior{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+    &>li{
+        @include border-bottom-radius(6px);
+        display: inline-block;
+        padding: 0 22px 5px 22px;
+        background-color: $blue-dark;
+    }
+
+    a{
+        color: $white-dark;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+}
+
+.nav-pills {
+    margin-bottom: 10px;
+    > li {
+        a{
+            font-weight: bold;
+            color: $blue-dark;
+        }
+        &.active > a {
+            color: $blue-dark;
+            background-color: $yellow;
+            border-color: darken($yellow, 8);
+        }
+        &.active > a:hover {
+            color: $blue-dark;
+            background-color: darken($yellow, 5);
+            border-color: darken($yellow, 13);
+        }
+    }
+}
+
+.dropdown-menu{
+    @include border-radius (4px !important);
+    @include box-shadow (none !important);
+    background-color: #333D46 !important;
+
+    a{
+        color: $white-dark !important;
+        text-align: left;
+
+        &:hover{
+            background-color: #2a6496;
+        }
+    }
+}
+
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block !important;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+
+/* # TAGCLOUD
+================================================== */
+.widget-tagcloud{
+    a{
+        @include border-radius(3px);
+        display: inline-block;
+        padding: 3px 5px 4px;
+        margin: 0 0 4px;
+        font-size: 12px!important;
+        font-weight: 400;
+        line-height: 18px;
+        color: $white;
+        background-color: $blue-dark;
+    }
+}
+
+
+/* # PANEL
+================================================== */
+.panel{
+    border: none;
+    background-color: $white;
+    margin-bottom: 50px;
+    @include box-shadow(none);
+
+    &.panel-image{
+        margin-bottom: 15px;
+    }
+
+    .panel-body{
+        padding: 0 10px;
+    }
+}
+
+
+/* # SLIDER
+================================================== */
+.slider{
+    @include border-radius(6px);
+    padding: 5px;
+    border: 1px solid #ccc;
+
+    .item,
+    img{
+        @include border-radius(6px);
+    }
+}
+
+.owl-nav.disabled,
+.owl-dots{
+  display: none;
+}
+
+
+/* # WELL
+================================================== */
+.well{
+    &.well-protect h4 {
+        margin-top: 0px;
+    }
+
+    &.well-search{
+        margin-top: 10px;
+    }
+}

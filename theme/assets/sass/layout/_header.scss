@@ -1,0 +1,16 @@
+/* # HEADER
+================================================== */
+
+header.container-header{
+    @include background-image( image-url("bg-main.png") );
+    background-color: $white-dark;
+    border-top: 8px solid $blue-dark;
+    height: 200px;
+
+    .logo-gcems{
+        padding: 10px 0px;
+    }
+    .nome-gcems{
+        padding-top: 30px;
+    }
+}

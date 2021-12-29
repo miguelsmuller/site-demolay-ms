@@ -1,0 +1,24 @@
+{
+  "name": "demolayms-theme",
+  "homepage": "https://bitbucket.org/miguelsneto/demolayms",
+  "version": "1.0.0",
+  "license": "GNU General Public License v2 or later",
+  "private": true,
+  "authors": [
+    "Miguel Muller <miguel.sneto[at]devim.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "animate.css": "#3.0.0",
+    "Aqua-Resizer": "https://github.com/syamilmj/Aqua-Resizer.git",
+    "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git#3.1.0",
+    "fontawesome": "#4.3.0",
+    "jqueryui": "#1.10.4",
+    "lightbox": "https://github.com/lokesh/lightbox2.git#~2.7.1",
+    "owl.carousel": "~2.3.4"
+  }
+}

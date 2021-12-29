@@ -1,0 +1,1 @@
+<?php include 'archive-entidade.php'; ?>

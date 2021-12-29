@@ -1,0 +1,77 @@
+/* # FOOTER
+================================================== */
+
+footer.footer-main{
+    color: $white;
+
+    a{
+        color: $white;
+    }
+
+    .primary{
+        padding: 20px 0;
+        background-color: $blue-dark;
+        border-top: 8px solid $yellow;
+
+        .rodape-contato{
+
+            img{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            p{
+                font-weight: bold;
+            }
+        }
+
+        ul.rodape-menu{
+            font-size: 14px;
+            font-weight: bold;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+
+            li{
+                margin-bottom: 10px;
+
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        ul.rodape-lideranca{
+            font-size: 14px;
+            font-weight: bold;
+            padding-left: 0;
+            margin-top: 15px;
+            margin-bottom: 0;
+            list-style: none;
+
+            li{
+                margin-bottom: 10px;
+
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    .secondary{
+        background-color: $blue-dark;
+        border-top: 8px solid $blue-light;
+
+        p{
+            font-size: 12px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .logo-devim{
+            margin: 5px 0;
+            float: right;
+        }
+    }
+}
